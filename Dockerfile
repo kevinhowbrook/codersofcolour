@@ -24,7 +24,7 @@ WORKDIR /app
 ENV PYTHONPATH=/app \
     DJANGO_SETTINGS_MODULE=mysite.settings.production \
     PORT=8000 \
-    WEB_CONCURRENCY=3 \
+    WEB_CONCURRENCY=3
 
 # Set argument for switching dev/production requirements.
 ARG BUILD_ENV
