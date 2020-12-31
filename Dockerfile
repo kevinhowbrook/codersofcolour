@@ -16,7 +16,6 @@ RUN pip install gunicorn
 COPY . /code/
 # Set the working directory to /code/
 WORKDIR /code/
-
 RUN python manage.py migrate
 
 RUN useradd wagtail
