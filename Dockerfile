@@ -3,24 +3,6 @@ FROM python:3.7
 RUN useradd wagtail && mkdir /app && chown wagtail /app
 
 WORKDIR /app
-
-# Set default environment variables. They are used at build time and runtime.
-# If you specify your own environment variables on Heroku or Dokku, they will
-# override the ones set here. The ones below serve as sane defaults only.
-#  * PATH - Make sure that Poetry is on the PATH
-#  * PYTHONUNBUFFERED - This is useful so Python does not hold any messages
-#    from being output.
-#    https://docs.python.org/3.8/using/cmdline.html#envvar-PYTHONUNBUFFERED
-#    https://docs.python.org/3.8/using/cmdline.html#cmdoption-u
-#  * PYTHONPATH - enables use of django-admin command.
-#  * DJANGO_SETTINGS_MODULE - default settings used in the container.
-#  * PORT - default port used. Please match with EXPOSE so it works on Dokku.
-#    Heroku will ignore EXPOSE and only set PORT variable. PORT variable is
-#    read/used by Gunicorn.
-#  * WEB_CONCURRENCY - number of workers used by Gunicorn. The variable is
-#    read by Gunicorn.
-#  * GUNICORN_CMD_ARGS - additional arguments to be passed to Gunicorn. This
-#    variable is read by Gunicorn
 ENV PYTHONPATH=/app \
     DJANGO_SETTINGS_MODULE=mysite.settings.production \
     PORT=8000 \
