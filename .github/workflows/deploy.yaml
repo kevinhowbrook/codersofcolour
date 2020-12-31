@@ -26,8 +26,6 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Django Testing project
-      env:
-        DATABASE_URL: ${{ secrets.DATABASE_URL }}
       run: |
         python manage.py migrate
         python3 manage.py test # Don't forget to run tests
