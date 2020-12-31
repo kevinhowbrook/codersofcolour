@@ -50,9 +50,6 @@ WORKDIR /app/
 # Copy gunicorn config overrides.
 COPY gunicorn-conf.py ./
 
-# Copy application code.
-COPY --chown=wagtail . .
-
 # Collect static. This command will move static files from application
 # directories and "static_compiled" folder to the main static directory that
 # will be served by the WSGI server.
