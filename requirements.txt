@@ -73,7 +73,7 @@ tzlocal==1.5.1
 Unidecode==1.1.1
 urllib3==1.25.8
 virtualenv==20.0.3
-wagtail==2.8
+wagtail==2.9.3
 watchdog==0.10.2
 webencodings==0.5.1
 whichcraft==0.6.1
