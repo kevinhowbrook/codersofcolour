@@ -48,7 +48,7 @@ COPY . /app/
 WORKDIR /app/
 
 # Copy gunicorn config overrides.
-COPY gunicorn-conf.py ./
+#COPY gunicorn-conf.py ./
 
 # Collect static. This command will move static files from application
 # directories and "static_compiled" folder to the main static directory that
