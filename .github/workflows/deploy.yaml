@@ -33,6 +33,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_PRODUCTION}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-
-    - name: Successful Message
+    - name: Success
       run: echo Successfully Deployed!!
