@@ -4,4 +4,4 @@ build:
 release:
   image: web
   command:
-    - ls -lah && django-admin createcachetable && django-admin migrate --noinput
+    - django-admin createcachetable && django-admin migrate --noinput
